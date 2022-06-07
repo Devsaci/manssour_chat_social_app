@@ -1,8 +1,10 @@
 
+import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/components.dart';
 import 'cubit/cubit.dart';
+import 'cubit/states.dart';
 
 class SocialLoginScreen extends StatelessWidget {
    SocialLoginScreen({Key? key}) : super(key: key);
@@ -66,10 +68,10 @@ class SocialLoginScreen extends StatelessWidget {
                     // suffix: ShopLoginCubit.get(context).suffix,
                     onSubmit: (value) {
                       if (formKey.currentState!.validate()) {
-                        //  SocialLoginCubit.get(context).userLogin(
-                        //   email: emailController.text,
-                        //   password: passwordController.text,
-                        // );
+                         SocialLoginCubit.get(context).userLogin(
+                          email: emailController.text,
+                          password: passwordController.text,
+                        );
                       }
                     },
                     suffixPressed: () {
@@ -89,23 +91,23 @@ class SocialLoginScreen extends StatelessWidget {
                   const SizedBox(
                     height: 30.0,
                   ),
-                  // ConditionalBuilder(
-                  //   condition: state is! SocialLoginLoadingState,
-                  //   builder: (BuildContext context) => defaultButton(
-                  //     function: () {
-                  //       if (formKey.currentState!.validate()) {
-                  //         SocialLoginCubit.get(context).userLogin(
-                  //           email: emailController.text,
-                  //           password: passwordController.text,
-                  //         );
-                  //       }
-                  //     },
-                  //     text: ('login'),
-                  //     isUpperCase: true,
-                  //   ),
-                  //   fallback: (BuildContext context) =>
-                  //   const Center(child: CircularProgressIndicator()),
-                  // ),
+                  ConditionalBuilder(
+                    condition: state is! SocialLoginLoadingState,
+                    builder: (BuildContext context) => defaultButton(
+                      function: () {
+                        if (formKey.currentState!.validate()) {
+                          SocialLoginCubit.get(context).userLogin(
+                            email: emailController.text,
+                            password: passwordController.text,
+                          );
+                        }
+                      },
+                      text: ('login'),
+                      isUpperCase: true,
+                    ),
+                    fallback: (BuildContext context) =>
+                    const Center(child: CircularProgressIndicator()),
+                  ),
                   const SizedBox(
                     height: 15.0,
                   ),
