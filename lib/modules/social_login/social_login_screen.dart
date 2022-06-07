@@ -125,10 +125,7 @@ class SocialLoginScreen extends StatelessWidget {
                                 ),
                                 defaultTextButton(
                                   function: () {
-// navigateTo(
-//   context,
-//   SocialRegisterScreen(),
-// );
+                                    navigateTo(context, SocialRegisterScreen());
                                   },
                                   text: ('register'),
                                 ),
@@ -145,3 +142,4 @@ class SocialLoginScreen extends StatelessWidget {
   }
 }
 
+class SocialRegisterScreen {}
