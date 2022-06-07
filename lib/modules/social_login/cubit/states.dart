@@ -1,5 +1,3 @@
-
-
 import '../../../models/login_model.dart';
 
 abstract class SocialLoginStates {}
@@ -18,7 +16,6 @@ class SocialLoginErrorState extends SocialLoginStates {
   final String error;
 
   SocialLoginErrorState(this.error);
-
 }
 
 class SocialChangePasswordVisibilityState extends SocialLoginStates {}
