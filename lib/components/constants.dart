@@ -1,6 +1,6 @@
 
 
-import '../modules/social_login_screen.dart';
+import '../modules/social_login/social_login_screen.dart';
 import '../shared/network/local/cache_helper.dart';
 import 'components.dart';
 
