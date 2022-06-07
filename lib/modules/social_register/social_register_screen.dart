@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:manssour_chat_social_app/components/components.dart';
 
 class SocialRegisterScreen extends StatelessWidget {
-  const SocialRegisterScreen({Key? key}) : super(key: key);
-
+   // SocialRegisterScreen({Key? key}) : super(key: key);
+  var nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class SocialRegisterScreen extends StatelessWidget {
             height: 30.0,
           ),
           defaultFormField(
-
+            controller: nameController,
           ),
         ],
       ),
