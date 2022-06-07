@@ -19,6 +19,12 @@ class SocialRegisterScreen  extends StatelessWidget {
               color: Colors.black,
             ),
           ),
+          Text(
+            'Register now to communicate with friends',
+            style: Theme.of(context).textTheme.bodyText1?.copyWith(
+              color: Colors.grey,
+            ),
+          ),
 
         ],
       ),
