@@ -30,6 +30,12 @@ class SocialRegisterScreen extends StatelessWidget {
           defaultFormField(
             controller: nameController,
             type: TextInputType.name,
+              validate:(value){
+                if (value!.isEmpty) {
+                  return 'please enter your name';
+                }
+                return null;
+              }
           ),
         ],
       ),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../components/components.dart';
+import '../social_register/social_register_screen.dart';
 import 'cubit/cubit.dart';
 import 'cubit/states.dart';
 
@@ -142,4 +143,4 @@ class SocialLoginScreen extends StatelessWidget {
   }
 }
 
-class SocialRegisterScreen {}
+
