@@ -29,6 +29,7 @@ class SocialRegisterScreen extends StatelessWidget {
           ),
           defaultFormField(
             controller: nameController,
+            type: TextInputType.name,
           ),
         ],
       ),
