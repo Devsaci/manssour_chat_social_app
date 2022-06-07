@@ -13,6 +13,12 @@ class SocialRegisterScreen  extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
+          Text(
+            'REGISTER',
+            style: Theme.of(context).textTheme.headline4?.copyWith(
+              color: Colors.black,
+            ),
+          ),
 
         ],
       ),
