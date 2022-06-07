@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:manssour_chat_social_app/components/components.dart';
 
 class SocialRegisterScreen extends StatelessWidget {
-   // SocialRegisterScreen({Key? key}) : super(key: key);
+  // SocialRegisterScreen({Key? key}) : super(key: key);
   var nameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,12 +31,13 @@ class SocialRegisterScreen extends StatelessWidget {
           defaultFormField(
             controller: nameController,
             type: TextInputType.name,
-              validate:(value){
-                if (value!.isEmpty) {
-                  return 'please enter your name';
-                }
-                return null;
+            validate: (value) {
+              if (value!.isEmpty) {
+                return 'please enter your name';
               }
+              return null;
+            },
+            label: 'User Name',
           ),
         ],
       ),
