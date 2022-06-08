@@ -40,6 +40,9 @@ class SocialRegisterScreen extends StatelessWidget {
             label: 'User Name',
             prefix: Icons.person,
           ),
+          SizedBox(
+            height: 15.0,
+          ),
         ],
       ),
     );
