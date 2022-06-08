@@ -57,7 +57,7 @@ class SocialRegisterScreen extends StatelessWidget {
                   defaultFormField(
                     controller: emailController,
                     type: TextInputType.emailAddress,
-                    validate: ( value) {
+                    validate: (value) {
                       if (value!.isEmpty) {
                         return 'please enter your email address';
                       }
@@ -71,12 +71,11 @@ class SocialRegisterScreen extends StatelessWidget {
                   defaultFormField(
                     controller: passwordController,
                     type: TextInputType.visiblePassword,
-                    suffix:null,
+                    suffix: null,
                     onSubmit: (value) {},
                     isPassword: false,
-                    suffixPressed: () {
-                    },
-                    validate: ( value) {
+                    suffixPressed: () {},
+                    validate: (value) {
                       if (value!.isEmpty) {
                         return 'password is too short';
                       }
@@ -87,7 +86,7 @@ class SocialRegisterScreen extends StatelessWidget {
                   defaultFormField(
                     controller: phoneController,
                     type: TextInputType.phone,
-                    validate: ( value) {
+                    validate: (value) {
                       if (value!.isEmpty) {
                         return 'please enter your phone number';
                       }
@@ -98,7 +97,6 @@ class SocialRegisterScreen extends StatelessWidget {
                   SizedBox(
                     height: 30.0,
                   ),
-
                 ],
               ),
             ),
