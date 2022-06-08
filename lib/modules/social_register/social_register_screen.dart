@@ -103,6 +103,7 @@ class SocialRegisterScreen extends StatelessWidget {
                     builder: (BuildContext context) => defaultButton(
                       function: (){},
                       text: 'register',
+                      isUpperCase: true,
                     ),
                     fallback: (context) =>
                         Center(child: CircularProgressIndicator()),
