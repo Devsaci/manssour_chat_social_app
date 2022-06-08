@@ -38,6 +38,7 @@ class SocialRegisterScreen extends StatelessWidget {
               return null;
             },
             label: 'User Name',
+            prefix: Icons.person,
           ),
         ],
       ),
