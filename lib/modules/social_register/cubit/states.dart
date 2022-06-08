@@ -1,13 +1,19 @@
-abstract class ShopRegisterStates {}
+import '../../../models/login_model.dart';
 
-class ShopRegisterInitialState extends ShopRegisterStates {}
+abstract class SocialRegisterStates {}
 
-class ShopRegisterLoadingState extends ShopRegisterStates {}
+class SocialRegisterInitialState extends SocialRegisterStates {}
 
-class ShopRegisterSuccessState extends ShopRegisterStates {}
+class SocialRegisterLoadingState extends SocialRegisterStates {}
 
-class ShopRegisterErrorState extends ShopRegisterStates {
+class SocialRegisterSuccessState extends SocialRegisterStates {
+  final SocialLoginModel loginModel;
+
+  SocialRegisterSuccessState(this.loginModel);
+}
+
+class SocialRegisterErrorState extends SocialRegisterStates {
   final String error;
 
-  ShopRegisterErrorState(this.error);
+  SocialRegisterErrorState(this.error);
 }
