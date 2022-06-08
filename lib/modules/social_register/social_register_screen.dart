@@ -8,6 +8,7 @@ class SocialRegisterScreen extends StatelessWidget {
   var nameController = TextEditingController();
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
+  var phoneController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -74,6 +75,17 @@ class SocialRegisterScreen extends StatelessWidget {
             },
             label: 'Password',
             prefix: Icons.lock_outline,
+          ),
+          defaultFormField(
+            controller: phoneController,
+            type: TextInputType.phone,
+            validate: ( value) {
+              if (value!.isEmpty) {
+                return 'please enter your phone number';
+              }
+            },
+            label: 'Phone',
+            prefix: Icons.phone,
           ),
         ],
       ),
