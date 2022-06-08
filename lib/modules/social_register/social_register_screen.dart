@@ -7,6 +7,7 @@ class SocialRegisterScreen extends StatelessWidget {
   // SocialRegisterScreen({Key? key}) : super(key: key);
   var nameController = TextEditingController();
   var emailController = TextEditingController();
+  var passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +55,25 @@ class SocialRegisterScreen extends StatelessWidget {
             },
             label: 'Email Address',
             prefix: Icons.email_outlined,
+          ),
+          SizedBox(
+            height: 15.0,
+          ),
+          defaultFormField(
+            controller: passwordController,
+            type: TextInputType.visiblePassword,
+            suffix:null,
+            onSubmit: (value) {},
+            isPassword: false,
+            suffixPressed: () {
+            },
+            validate: ( value) {
+              if (value!.isEmpty) {
+                return 'password is too short';
+              }
+            },
+            label: 'Password',
+            prefix: Icons.lock_outline,
           ),
         ],
       ),
