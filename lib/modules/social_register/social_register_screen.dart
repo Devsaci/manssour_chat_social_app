@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:manssour_chat_social_app/components/components.dart';
 
@@ -97,6 +98,15 @@ class SocialRegisterScreen extends StatelessWidget {
                   SizedBox(
                     height: 30.0,
                   ),
+                  ConditionalBuilder(
+                    condition: true,
+                    builder: (BuildContext context) => defaultButton(
+                      function: (){},
+                      text: 'register',
+                    ),
+                    fallback: (context) =>
+                        Center(child: CircularProgressIndicator()),
+                  )
                 ],
               ),
             ),
