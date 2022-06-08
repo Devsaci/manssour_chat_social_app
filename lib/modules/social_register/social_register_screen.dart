@@ -6,6 +6,7 @@ import 'package:manssour_chat_social_app/components/components.dart';
 class SocialRegisterScreen extends StatelessWidget {
   // SocialRegisterScreen({Key? key}) : super(key: key);
   var nameController = TextEditingController();
+  var emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +43,17 @@ class SocialRegisterScreen extends StatelessWidget {
           ),
           SizedBox(
             height: 15.0,
+          ),
+          defaultFormField(
+            controller: emailController,
+            type: TextInputType.emailAddress,
+            validate: ( value) {
+              if (value!.isEmpty) {
+                return 'please enter your email address';
+              }
+            },
+            label: 'Email Address',
+            prefix: Icons.email_outlined,
           ),
         ],
       ),
